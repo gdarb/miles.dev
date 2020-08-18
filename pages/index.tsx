@@ -11,7 +11,7 @@ export default function pages() {
 		</Head>
 		<main className={styles.main}>
 			<h1 className={styles.title}>
-				Welcome to
+				Welcome to &nbsp;
 				<a href="https://nextjs.org">
 					Next.js!
 				</a>
