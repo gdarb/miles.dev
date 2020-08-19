@@ -3,6 +3,7 @@ name: "miles-dev"
 lint: {
 	ignore: [
 		".next"
+		"pages/api/hello.ts"
 ]
 }
 root: true
