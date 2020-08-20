@@ -10,9 +10,9 @@
     "commit": "git-cz"
   },
   "dependencies": {
-    "next": "9.5.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "rome": "^10.0.4-beta",
     "theme-ui": "^0.3.1"
   },
