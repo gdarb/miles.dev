@@ -1,73 +1,60 @@
+import React from "react";
 import Head from "next/head";
-import {default as styles} from "../styles/Home.module.css";
+import {Box, Flex, Heading, Image, Link as ThemeLink} from "theme-ui";
+import {GitHub, Key, Linkedin, Mail} from "react-feather";
 
 export default function pages() {
-	return <div className={styles.container}>
+	const iconSize = "1.5rem";
+
+	return <>
 		<Head>
 			<title>
-				Create Next App
+				Aidan Miles
 			</title>
+			<meta name="description" content="Aidan Miles - Software Developer" />
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
-		<main className={styles.main}>
-			<h1 className={styles.title}>
-				Welcome to &nbsp;
-				<a href="https://nextjs.org">
-					Next.js!
-				</a>
-			</h1>
-			<p className={styles.description}>
-				Get started by editing
-				{" "}
-				<code className={styles.code}>
-					pages/index.js
-				</code>
-			</p>
-			<div className={styles.grid}>
-				<a href="https://nextjs.org/docs" className={styles.card}>
-					<h3>
-						Documentation &rarr;
-					</h3>
-					<p>
-						Find in-depth information about Next.js features and API.
-					</p>
-				</a>
-				<a href="https://nextjs.org/learn" className={styles.card}>
-					<h3>
-						Learn &rarr;
-					</h3>
-					<p>
-						Learn about Next.js in an interactive course with quizzes!
-					</p>
-				</a>
-				<a href="https://github.com/vercel/next.js/tree/master/examples"
-				className={styles.card}>
-					<h3>
-						Examples &rarr;
-					</h3>
-					<p>
-						Discover and deploy boilerplate example Next.js projects.
-					</p>
-				</a>
-				<a href="https://vercel.com/import?filter=next.js&amp;utm_source=create-next-app&amp;utm_medium=default-template&amp;utm_campaign=create-next-app"
-				className={styles.card}>
-					<h3>
-						Deploy &rarr;
-					</h3>
-					<p>
-						Instantly deploy your Next.js site to a public URL with Vercel.
-					</p>
-				</a>
-			</div>
-		</main>
-		<footer className={styles.footer}>
-			<a href="https://vercel.com?utm_source=create-next-app&amp;utm_medium=default-template&amp;utm_campaign=create-next-app"
-			target="_blank"
-			rel="noopener noreferrer">
-				Powered by
-				{" "}
-				<img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-			</a>
-		</footer>
-	</div>;
+		<Flex sx={{variant: "layout.main"}}>
+			<Box sx={{
+				my: 3,
+				bg: "#d3d3d3",
+				height: "6rem",
+				width: "6rem",
+				clipPath: "circle(3rem)",
+			}}>
+				<Image alt="avatar"
+				src="avatar.jpg"
+				sx={{
+					clipPath: "circle(2.8rem)",
+					height: "6rem",
+					width: "6rem",
+				}} />
+			</Box>
+			<Heading as="h1" sx={{my: 3, fontSize: 6, fontWeight: "heading"}}>
+				Aidan Miles
+			</Heading>
+			<Box sx={{my: 3}}>
+				<ThemeLink variant="icon"
+				title="email"
+				href="mailto:aidan.miles@gmail.com">
+					<Mail size={iconSize} />
+				</ThemeLink>
+				<ThemeLink variant="icon"
+				title="GitHub"
+				href="https://github.com/gdarb">
+					<GitHub size={iconSize} />
+				</ThemeLink>
+				<ThemeLink variant="icon"
+				title="LinkedIn"
+				href="https://www.linkedin.com/in/aidanmiles/">
+					<Linkedin size={iconSize} />
+				</ThemeLink>
+				<ThemeLink variant="icon"
+				title="Keybase"
+				href="https://keybase.io/gdarb">
+					<Key size={iconSize} />
+				</ThemeLink>
+			</Box>
+		</Flex>
+	</>;
 }

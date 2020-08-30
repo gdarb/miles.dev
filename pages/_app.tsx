@@ -1,11 +1,14 @@
-import "../styles/globals.css";
-import theme from "../styles/theme";
-import {ThemeProvider} from "theme-ui";
 import type {AppProps} from "next/app";
+import {ThemeProvider} from "theme-ui";
+import theme from "../styles/theme";
+import Layout from "../components/Layout";
 
 function MyApp({Component, pageProps}: AppProps) {
+	// rome-ignore lint/jsx/noPropSpreading
 	return <ThemeProvider theme={theme}>
-		<Component {...pageProps} />
+		<Layout>
+			<Component {...pageProps} />
+		</Layout>
 	</ThemeProvider>;
 }
 
