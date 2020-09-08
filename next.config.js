@@ -22,8 +22,8 @@ module.exports = {
 						value: "strict-origin-when-cross-origin",
 					},
 					{
-						key: "Feature-Policy",
-						value: `accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'`,
+						key: "Permissions-Policy",
+						value: "accelerometer=(); camera=(); geolocation=(); gyroscope=(); magnetometer=(); microphone=(); payment=(); usb=()",
 					},
 					{
 						key: "Report-To",
