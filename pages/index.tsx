@@ -4,7 +4,7 @@ import {Box, Flex, Heading, Image, Link as ThemeLink} from "theme-ui";
 import {GitHub, Key, Linkedin, Mail} from "react-feather";
 
 export default function pages() {
-	const iconSize = "1.5rem";
+	const iconSize = "100%";
 
 	return <>
 		<Head>

@@ -11,6 +11,8 @@ function Header() {
 	50% { opacity: 1; }
 	100% { opacity: 0; }`;
 
+	const iconSize = "100%";
+
 	return <Flex as="header" sx={{width: "100%", bg: "header", height: "4rem"}}>
 		<Flex sx={{
 			width: "container",
@@ -61,9 +63,11 @@ function Header() {
 				},
 				ml: 3,
 			}}>
-				{colorMode === "default"
-					? <Moon size={"1.5rem"} />
-					: <Sun size={"1.5rem"} />}
+				<ThemeLink variant="icon">
+					{colorMode === "default"
+						? <Moon size={iconSize} />
+						: <Sun size={iconSize} />}
+				</ThemeLink>
 			</Button>
 		</Flex>
 	</Flex>;

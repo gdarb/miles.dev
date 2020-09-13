@@ -86,6 +86,9 @@ const theme: Theme = {
 	links: {
 		icon: {
 			m: 3,
+			display: "inline-block",
+			height: "icon",
+			width: "icon",
 			color: "text",
 			"&:hover, &:focus, &.active": {
 				color: "primary",

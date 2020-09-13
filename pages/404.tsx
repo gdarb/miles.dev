@@ -4,6 +4,8 @@ import {Box, Flex, Heading} from "theme-ui";
 import {CloudDrizzle} from "react-feather";
 
 export default function pages() {
+	const iconSize = "100%";
+
 	return <>
 		<Head>
 			<title>
@@ -15,8 +17,10 @@ export default function pages() {
 		<Flex sx={{variant: "layout.main"}}>
 			<Box sx={{
 				my: 3,
+				height: "icon",
+				width: "icon",
 			}}>
-				<CloudDrizzle size={"1.5rem"} />
+				<CloudDrizzle size={iconSize} />
 			</Box>
 			<Heading as="h1" sx={{my: 3, fontSize: 6, fontWeight: "heading"}}>
 				404
