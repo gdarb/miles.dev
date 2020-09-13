@@ -48,10 +48,10 @@ function Header() {
 			<Button title="Toggle Color Mode"
 			type="button"
 			onClick={() => {
-				setColorMode(colorMode === "default" ? "dark" : "default");
+				setColorMode(colorMode === "light" ? "dark" : "light");
 			}}
 			onKeyPress={() => {
-				setColorMode(colorMode === "default" ? "dark" : "default");
+				setColorMode(colorMode === "light" ? "dark" : "light");
 			}}
 			sx={{
 				appearance: "none",
@@ -64,7 +64,7 @@ function Header() {
 				ml: 3,
 			}}>
 				<ThemeLink variant="icon">
-					{colorMode === "default"
+					{colorMode === "light"
 						? <Moon size={iconSize} />
 						: <Sun size={iconSize} />}
 				</ThemeLink>

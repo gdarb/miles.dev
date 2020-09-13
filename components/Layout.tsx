@@ -8,7 +8,13 @@ function Layout(
 		children: React.ReactNode;
 	},
 ) {
-	return <Flex sx={{minHeight: "100vh", width: "100%", flexDirection: "column"}}>
+	return <Flex sx={{
+		minHeight: "100vh",
+		width: "100%",
+		flexDirection: "column",
+		bg: "background",
+		color: "text",
+	}}>
 		<Header />
 		<Flex as="main" sx={{width: "100%", flex: "1 1 auto"}}>
 			{props.children}

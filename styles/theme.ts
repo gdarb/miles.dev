@@ -1,6 +1,7 @@
 import {Theme} from "theme-ui";
 
 const theme: Theme = {
+	initialColorModeName: "light",
 	useColorSchemeMediaQuery: true,
 
 	colors: {
@@ -109,6 +110,9 @@ const theme: Theme = {
 	styles: {
 		root: {
 			fontFamily: "body",
+			margin: 0,
+			padding: 0,
+			fontFeatureSettings: `"liga", "tnum", "case", "calt", "zero", "ss01", "locl"`,
 		},
 	},
 };
