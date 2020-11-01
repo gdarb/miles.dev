@@ -63,11 +63,11 @@ function Header() {
 				},
 				ml: 3,
 			}}>
-				<ThemeLink variant="icon">
+				<Box variant="links.icon">
 					{colorMode === "light"
 						? <Moon size={iconSize} />
 						: <Sun size={iconSize} />}
-				</ThemeLink>
+				</Box>
 			</Button>
 		</Flex>
 	</Flex>;

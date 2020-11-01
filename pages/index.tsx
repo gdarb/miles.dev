@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import {Box, Flex, Heading, Image, Link as ThemeLink} from "theme-ui";
+import Image from "next/image";
+import {Box, Flex, Heading, Link as ThemeLink} from "theme-ui";
 import {GitHub, Key, Linkedin, Mail} from "react-feather";
 
 export default function pages() {
@@ -22,13 +23,13 @@ export default function pages() {
 				width: "6rem",
 				clipPath: "circle(3rem)",
 			}}>
-				<Image alt="avatar"
-				src="avatar.jpg"
-				sx={{
+				<Box sx={{
 					clipPath: "circle(2.8rem)",
 					height: "6rem",
 					width: "6rem",
-				}} />
+				}}>
+					<Image width={500} height={500} alt="avatar" src="/avatar.jpg" />
+				</Box>
 			</Box>
 			<Heading as="h1" sx={{my: 3, fontSize: 6, fontWeight: "heading"}}>
 				Aidan Miles
