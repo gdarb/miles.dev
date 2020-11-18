@@ -28,7 +28,7 @@
     "next": "^10.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-feather": "^2.0.8",
+    "react-feather": "^2.0.9",
     "rome": "^10.0.4-beta",
     "theme-ui": "^0.3.1"
   },
