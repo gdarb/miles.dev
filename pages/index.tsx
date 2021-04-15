@@ -1,61 +1,63 @@
-import React from "react";
-import Head from "next/head";
+import {ReactNode} from "react";
 import Image from "next/image";
-import {Box, Flex, Heading, Link as ThemeLink} from "theme-ui";
-import {GitHub, Key, Linkedin, Mail} from "react-feather";
+import {MailIcon} from "@heroicons/react/outline";
+import {Layout} from "../components/Layout";
+import {Container} from "../components/Container";
+import {GitHubIcon, KeybaseIcon, LinkedInIcon} from "../components/SocialIcons";
+import {Anchor} from "../components/Anchor";
+
+type Social = {
+	name: string;
+	icon: ReactNode;
+	href: string;
+};
+
+const socials: Social[] = [
+	{
+		name: "Email",
+		icon: <MailIcon className="transform scale-125" />,
+		href: "mailto:aidan.miles@gmail.com",
+	},
+	{
+		name: "GitHub",
+		icon: <GitHubIcon />,
+		href: "https://github.com/gdarb",
+	},
+	{
+		name: "LinkedIn",
+		icon: <LinkedInIcon />,
+		href: "https://www.linkedin.com/in/aidanmiles/",
+	},
+	{
+		name: "Keybase",
+		icon: <KeybaseIcon />,
+		href: "https://keybase.io/gdarb",
+	},
+];
 
 export default function pages() {
-	const iconSize = "100%";
-
-	return <>
-		<Head>
-			<title>
+	return <Layout>
+		<Container className="flex flex-col flex-auto justify-center items-center space-y-14">
+			<div className="relative w-28 h-28 rounded-full ring-4 ring-gray-300">
+				<Image src="/avatar.jpg"
+				layout="fill"
+				className="object-cover rounded-full" />
+			</div>
+			<h1 className="text-5xl font-bold text-center">
 				Aidan Miles
-			</title>
-			<meta name="description" content="Aidan Miles - Software Developer" />
-			<link rel="icon" href="/favicon.ico" />
-		</Head>
-		<Flex sx={{variant: "layout.main"}}>
-			<Box sx={{
-				my: 3,
-				bg: "#d3d3d3",
-				height: "6rem",
-				width: "6rem",
-				clipPath: "circle(3rem)",
-			}}>
-				<Box sx={{
-					clipPath: "circle(2.8rem)",
-					height: "6rem",
-					width: "6rem",
-				}}>
-					<Image width={500} height={500} alt="avatar" src="/avatar.jpg" />
-				</Box>
-			</Box>
-			<Heading as="h1" sx={{my: 3, fontSize: 6, fontWeight: "heading"}}>
-				Aidan Miles
-			</Heading>
-			<Box sx={{my: 3}}>
-				<ThemeLink variant="icon"
-				title="email"
-				href="mailto:aidan.miles@gmail.com">
-					<Mail size={iconSize} />
-				</ThemeLink>
-				<ThemeLink variant="icon"
-				title="GitHub"
-				href="https://github.com/gdarb">
-					<GitHub size={iconSize} />
-				</ThemeLink>
-				<ThemeLink variant="icon"
-				title="LinkedIn"
-				href="https://www.linkedin.com/in/aidanmiles/">
-					<Linkedin size={iconSize} />
-				</ThemeLink>
-				<ThemeLink variant="icon"
-				title="Keybase"
-				href="https://keybase.io/gdarb">
-					<Key size={iconSize} />
-				</ThemeLink>
-			</Box>
-		</Flex>
-	</>;
+			</h1>
+			<div className="flex space-x-8">
+				{socials.map(({name, icon, href}) =>
+					<Anchor key={href} href={href} className="w-8 h-8">
+						<span className="sr-only">
+							{name}
+						</span>
+						<div aria-hidden={true}>
+							{icon}
+						</div>
+					</Anchor>
+				)}
+			</div>
+		</Container>
+	</Layout>;
 }

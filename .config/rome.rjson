@@ -1,9 +1,0 @@
-// For configuration documentation see http://romefrontend.dev/#project-configuration
-name: "miles-dev"
-lint: {
-	ignore: [
-		".next"
-		"pages/api/hello.ts"
-]
-}
-root: true

@@ -1,47 +1,42 @@
 {
-  "name": "miles-dev",
-  "version": "0.1.0",
-  "private": true,
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "scripts": {
-    "build": "next build",
-    "commit": "git-cz",
-    "dev": "next dev",
-    "format": "rome check --apply",
-    "start": "next start"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "dependencies": {
-    "next": "^10.0.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-feather": "^2.0.9",
-    "rome": "^10.0.4-beta",
-    "theme-ui": "^0.3.1"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@types/node": "^14.14.20",
-    "@types/react": "^17.0.0",
-    "@types/theme-ui": "^0.3.7",
-    "commitizen": "^4.2.2",
-    "cz-conventional-changelog": "^3.3.0",
-    "globby": "^11.0.2",
-    "husky": "^4.3.7",
-    "typescript": "^4.1.3"
-  }
+	"name": "miles-dev",
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"dev": "next dev",
+		"format": "rome check --apply && rustywind --write .",
+		"prepare": "husky install .config/husky",
+		"start": "next start"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"dependencies": {
+		"@headlessui/react": "^1.0.0",
+		"@heroicons/react": "^1.0.1",
+		"@tailwindcss/aspect-ratio": "^0.2.0",
+		"@tailwindcss/forms": "^0.3.2",
+		"@tailwindcss/line-clamp": "^0.2.0",
+		"@tailwindcss/typography": "^0.4.0",
+		"autoprefixer": "^10.2.5",
+		"clsx": "^1.1.1",
+		"globby": "^11.0.3",
+		"next": "^10.1.3",
+		"postcss": "^8.2.10",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"tailwindcss": "^2.1.1"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^12.1.1",
+		"@commitlint/config-conventional": "^12.1.1",
+		"@types/node": "^14.14.39",
+		"@types/react": "^17.0.3",
+		"husky": "^6.0.0",
+		"rome": "^10.0.7-nightly.2021.2.10",
+		"rustywind": "^0.8.1",
+		"typescript": "^4.2.4"
+	}
 }

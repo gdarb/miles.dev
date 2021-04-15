@@ -1,11 +1,5 @@
-import {Box} from "theme-ui";
-
-function Footer() {
-	return <Box as="footer"
-	sx={{textAlign: "center", fontWeight: 300, fontSize: 0, my: 4}}>
-		&copy;&nbsp;
-		{new Date().getFullYear()}
-	</Box>;
+export function Footer() {
+	return <footer className="flex justify-center py-6 text-sm font-light">
+		&copy; 2021
+	</footer>;
 }
-
-export default Footer;
