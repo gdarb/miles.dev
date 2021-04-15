@@ -1,9 +1,12 @@
 module.exports = {
+	future: {
+		webpack5: true,
+	},
 	reactStrictMode: true,
 	webpack: (config, {isServer}) => {
 		if (isServer) {
-			require("./scripts/generate-sitemap");
-			require("./scripts/generate-robots");
+			require("./utils/generate-sitemap");
+			require("./utils/generate-robots");
 		}
 		return config;
 	},

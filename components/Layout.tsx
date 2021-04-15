@@ -1,26 +1,17 @@
-import React from "react";
-import {Flex} from "theme-ui";
-import Header from "./Header";
-import Footer from "./Footer";
+import {ReactNode} from "react";
+import {Header} from "./Header";
+import {Footer} from "./Footer";
 
-function Layout(
-	props: {
-		children: React.ReactNode;
-	},
-) {
-	return <Flex sx={{
-		minHeight: "100vh",
-		width: "100%",
-		flexDirection: "column",
-		bg: "background",
-		color: "text",
-	}}>
+type LayoutProps = {
+	children: ReactNode;
+};
+
+export function Layout({children}: LayoutProps) {
+	return <div className="flex flex-col min-h-screen">
 		<Header />
-		<Flex as="main" sx={{width: "100%", flex: "1 1 auto"}}>
-			{props.children}
-		</Flex>
+		<main className="flex flex-auto">
+			{children}
+		</main>
 		<Footer />
-	</Flex>;
+	</div>;
 }
-
-export default Layout;
