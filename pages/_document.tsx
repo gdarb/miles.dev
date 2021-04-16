@@ -16,14 +16,8 @@ class MyDocument extends Document {
 		return <Html lang="en">
 			<Head />
 			<link href="https://rsms.me/inter/inter.css" rel="stylesheet" />
-			<body className="text-gray-800 bg-gray-50 dark:text-gray-200 dark:bg-gray-800">
-				<style jsx={true} global={true}>
-					{`
-						body {
-							font-feature-settings: "ss01", "ss03", "cv06", "cv08", "cv11";
-						}
-					`}
-				</style>
+			<body className="text-gray-800 bg-gray-50 dark:text-gray-200 dark:bg-gray-800"
+			style={{fontFeatureSettings: '"ss01", "ss03", "cv06", "cv08", "cv11"'}}>
 				<Main />
 				<NextScript />
 			</body>
