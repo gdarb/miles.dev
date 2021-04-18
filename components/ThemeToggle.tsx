@@ -2,12 +2,12 @@ import {useEffect, useState} from "react";
 import {Switch} from "@headlessui/react";
 import {MoonIcon, SunIcon} from "@heroicons/react/outline";
 import {useTheme} from "next-themes";
-import {Anchor} from "./Anchor";
+import {Hover} from "./Hover";
 
 export function ThemeToggle() {
 	const [mounted, setMounted] = useState(false);
-	const {setTheme} = useTheme();
-	const [enabled, setEnabled] = useState(false);
+	const {theme, setTheme} = useTheme();
+	const [enabled, setEnabled] = useState(theme === "light" ? false : true);
 
 	function toggleTheme(checked: boolean) {
 		setEnabled(checked);
@@ -23,10 +23,10 @@ export function ThemeToggle() {
 
 	return <Switch checked={enabled} onChange={toggleTheme} className="w-6 h-6">
 		<span className="sr-only">
-			Toggle colour mode
+			Toggle theme
 		</span>
-		<Anchor aria-hidden={true}>
+		<Hover aria-hidden={true}>
 			{enabled ? <SunIcon /> : <MoonIcon />}
-		</Anchor>
+		</Hover>
 	</Switch>;
 }
