@@ -1,5 +1,6 @@
 import {Container} from "./Container";
 import {Link} from "./Link";
+import {ThemeToggle} from "./ThemeToggle";
 
 export function Header() {
 	return <header className="w-full bg-gray-200 dark:bg-gray-900">
@@ -10,6 +11,7 @@ export function Header() {
 				</Link>
 				<div className="w-3 h-5 bg-red-500 rounded-sm animate-pulse" />
 			</div>
+			<ThemeToggle />
 		</Container>
 	</header>;
 }
