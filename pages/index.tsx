@@ -40,6 +40,7 @@ export default function pages() {
 		<Container className="flex flex-col flex-auto justify-center items-center space-y-14">
 			<div className="relative w-28 h-28 rounded-full ring-4 ring-gray-300">
 				<Image src="/avatar.jpg"
+				alt="Avatar"
 				layout="fill"
 				className="object-cover rounded-full" />
 			</div>
