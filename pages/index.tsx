@@ -37,7 +37,7 @@ const socials: Social[] = [
 
 export default function pages() {
 	return <Layout>
-		<Container className="flex flex-col flex-auto justify-center items-center space-y-14">
+		<Container className="flex flex-col flex-auto justify-center items-center py-10 space-y-14">
 			<div className="relative w-28 h-28 rounded-full ring-4 ring-gray-300">
 				<Image src="/avatar.jpg"
 				alt="Avatar"
