@@ -6,13 +6,7 @@ import {Hover} from "./Hover";
 
 export function ThemeToggle() {
 	const [mounted, setMounted] = useState(false);
-	const {theme, setTheme} = useTheme();
-	const [enabled, setEnabled] = useState(theme === "light" ? false : true);
-
-	function toggleTheme(checked: boolean) {
-		setEnabled(checked);
-		setTheme(enabled ? "light" : "dark");
-	}
+	const {resolvedTheme, setTheme} = useTheme();
 
 	// When mounted on client, now we can show the UI
 	useEffect(() => setMounted(true), []);
@@ -21,12 +15,14 @@ export function ThemeToggle() {
 		return null;
 	}
 
-	return <Switch checked={enabled} onChange={toggleTheme} className="w-6 h-6">
+	return <Switch checked={resolvedTheme === "light"}
+	onChange={(value: boolean) => setTheme(value ? "light" : "dark")}
+	className="w-6 h-6">
 		<span className="sr-only">
 			Toggle theme
 		</span>
 		<Hover aria-hidden={true}>
-			{enabled ? <SunIcon /> : <MoonIcon />}
+			{resolvedTheme === "light" ? <MoonIcon /> : <SunIcon />}
 		</Hover>
 	</Switch>;
 }
