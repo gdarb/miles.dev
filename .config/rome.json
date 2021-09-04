@@ -1,9 +1,7 @@
 {
 	"name": "miles-dev",
 	"lint": {
-		"ignore": [
-			".next"
-		]
+		"ignore": [".next"]
 	},
 	"root": true
 }
