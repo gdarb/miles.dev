@@ -5,6 +5,7 @@ import {Layout} from "../components/Layout";
 import {Container} from "../components/Container";
 import {GitHubIcon, KeybaseIcon, LinkedInIcon} from "../components/SocialIcons";
 import {Anchor} from "../components/Anchor";
+import avatar from "../public/avatar.jpg"
 
 type Social = {
 	name: string;
@@ -39,9 +40,8 @@ export default function pages() {
 	return <Layout>
 		<Container className="flex flex-col flex-auto justify-center items-center py-10 space-y-14">
 			<div className="relative w-28 h-28 rounded-full ring-4 ring-gray-300">
-				<Image src="/avatar.jpg"
+				<Image src={avatar}
 				alt="Avatar"
-				layout="fill"
 				className="object-cover rounded-full" />
 			</div>
 			<h1 className="text-5xl font-bold text-center">

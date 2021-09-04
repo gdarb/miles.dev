@@ -1,6 +1,11 @@
-module.exports = {
+// @ts-check
+
+/**
+ * @type {import('next').NextConfig}
+ **/
+ const config = {
 	future: {
-		webpack5: true,
+		strictPostcssConfiguration: true,
 	},
 	reactStrictMode: true,
 	webpack: (config, {isServer}) => {
@@ -48,3 +53,5 @@ module.exports = {
 		];
 	},
 };
+
+module.exports = config;
