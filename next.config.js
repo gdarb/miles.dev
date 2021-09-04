@@ -3,12 +3,12 @@
 /**
  * @type {import('next').NextConfig}
  **/
- const config = {
+const config = {
 	future: {
 		strictPostcssConfiguration: true,
 	},
 	reactStrictMode: true,
-	webpack: (config, {isServer}) => {
+	webpack: (config, { isServer }) => {
 		if (isServer) {
 			require("./utils/generate-sitemap");
 			require("./utils/generate-robots");
