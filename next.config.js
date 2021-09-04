@@ -8,13 +8,6 @@ const config = {
 		strictPostcssConfiguration: true,
 	},
 	reactStrictMode: true,
-	webpack: (config, { isServer }) => {
-		if (isServer) {
-			require("./utils/generate-sitemap");
-			require("./utils/generate-robots");
-		}
-		return config;
-	},
 	async headers() {
 		return [
 			{

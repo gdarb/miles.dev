@@ -3,6 +3,7 @@
 	"private": true,
 	"scripts": {
 		"build": "next build",
+		"postbuild": "next-sitemap",
 		"dev": "next dev",
 		"format": "prettier --write . && rustywind --write .",
 		"lint": "next lint",
@@ -23,8 +24,8 @@
 		"@tailwindcss/typography": "^0.4.1",
 		"autoprefixer": "^10.3.4",
 		"clsx": "^1.1.1",
-		"globby": "^11.0.3",
 		"next": "^11.1.2",
+		"next-sitemap": "^1.6.164",
 		"next-themes": "^0.0.15",
 		"postcss": "^8.3.6",
 		"react": "^17.0.2",
