@@ -1,14 +1,14 @@
-import { ReactNode } from "react";
-import Image from "next/image";
 import { MailIcon } from "@heroicons/react/outline";
-import { Layout } from "../components/Layout";
+import Image from "next/image";
+import { ReactNode } from "react";
+import { Anchor } from "../components/Anchor";
 import { Container } from "../components/Container";
+import { Layout } from "../components/Layout";
 import {
 	GitHubIcon,
 	KeybaseIcon,
 	LinkedInIcon,
 } from "../components/SocialIcons";
-import { Anchor } from "../components/Anchor";
 import avatar from "../public/avatar.jpg";
 
 type Social = {

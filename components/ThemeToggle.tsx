@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
 import { Switch } from "@headlessui/react";
 import { MoonIcon, SunIcon } from "@heroicons/react/outline";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { Hover } from "./Hover";
 
 export function ThemeToggle() {
