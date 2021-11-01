@@ -7,6 +7,7 @@ const config = {
 	future: {
 		strictPostcssConfiguration: true,
 	},
+	swcMinify: true,
 	reactStrictMode: true,
 	async headers() {
 		return [
