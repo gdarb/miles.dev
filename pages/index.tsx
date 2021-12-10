@@ -20,7 +20,7 @@ type Social = {
 const socials: Social[] = [
 	{
 		name: "Email",
-		icon: <MailIcon className="transform scale-125" />,
+		icon: <MailIcon className="scale-125" />,
 		href: "mailto:aidan.miles@gmail.com",
 	},
 	{
@@ -44,7 +44,7 @@ export default function pages() {
 	return (
 		<Layout>
 			<Container className="flex flex-col flex-auto justify-center items-center py-10 space-y-14">
-				<div className="relative w-28 h-28 rounded-full ring-4 ring-gray-300">
+				<div className="relative w-28 h-28 rounded-full ring-4 ring-neutral-300">
 					<Image
 						src={avatar}
 						alt="Avatar"
