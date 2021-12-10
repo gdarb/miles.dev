@@ -5,7 +5,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
 	return (
-		<header className="w-full bg-gray-200 dark:bg-gray-900">
+		<header className="w-full bg-neutral-200 dark:bg-neutral-900">
 			<Container className="flex flex-wrap justify-between items-center h-16">
 				<div className="flex items-center space-x-2">
 					<Link href="/" passHref={true}>
