@@ -10,11 +10,6 @@
 		"prepare": "husky install",
 		"start": "next start"
 	},
-	"commitlint": {
-		"extends": [
-			"@commitlint/config-conventional"
-		]
-	},
 	"dependencies": {
 		"@headlessui/react": "^1.4.2",
 		"@heroicons/react": "^1.0.5",
