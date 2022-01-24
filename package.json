@@ -5,7 +5,7 @@
 		"build": "next build",
 		"postbuild": "next-sitemap",
 		"dev": "next dev",
-		"format": "prettier --write . && rustywind --write .",
+		"format": "prettier --write .",
 		"lint": "next lint",
 		"prepare": "husky install",
 		"start": "next start"
@@ -38,7 +38,7 @@
 		"eslint-config-prettier": "^8.3.0",
 		"husky": "^7.0.4",
 		"prettier": "2.5.1",
-		"rustywind": "^0.12.2",
+		"prettier-plugin-tailwindcss": "^0.1.3",
 		"typescript": "^4.5.3"
 	}
 }
