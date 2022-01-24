@@ -43,18 +43,18 @@ const socials: Social[] = [
 export default function pages() {
 	return (
 		<Layout>
-			<Container className="flex flex-col flex-auto justify-center items-center py-10 space-y-14">
-				<div className="relative w-28 h-28 rounded-full ring-4 ring-neutral-300">
+			<Container className="flex flex-auto flex-col items-center justify-center space-y-14 py-10">
+				<div className="relative h-28 w-28 rounded-full ring-4 ring-neutral-300">
 					<Image
 						src={avatar}
 						alt="Avatar"
-						className="object-cover rounded-full"
+						className="rounded-full object-cover"
 					/>
 				</div>
-				<h1 className="text-5xl font-bold text-center">Aidan Miles</h1>
+				<h1 className="text-center text-5xl font-bold">Aidan Miles</h1>
 				<div className="flex space-x-8">
 					{socials.map(({ name, icon, href }) => (
-						<Anchor key={href} href={href} className="w-8 h-8">
+						<Anchor key={href} href={href} className="h-8 w-8">
 							<span className="sr-only">{name}</span>
 							<div aria-hidden={true}>{icon}</div>
 						</Anchor>

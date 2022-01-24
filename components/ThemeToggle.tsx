@@ -19,7 +19,7 @@ export function ThemeToggle() {
 		<Switch
 			checked={resolvedTheme === "light"}
 			onChange={(value: boolean) => setTheme(value ? "light" : "dark")}
-			className="w-6 h-6"
+			className="h-6 w-6"
 		>
 			<span className="sr-only">Toggle theme</span>
 			<Hover aria-hidden={true}>

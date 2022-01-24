@@ -18,7 +18,7 @@ class MyDocument extends Document {
 				<Head />
 				<link href="https://rsms.me/inter/inter.css" rel="stylesheet" />
 				<body
-					className="text-neutral-800 bg-neutral-50 dark:text-neutral-200 dark:bg-neutral-800"
+					className="bg-neutral-50 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200"
 					style={{
 						fontFeatureSettings:
 							'"ss01", "ss03", "cv06", "cv08", "cv11"',
