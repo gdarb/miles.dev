@@ -15,8 +15,22 @@ class MyDocument extends Document {
 	render() {
 		return (
 			<Html lang="en">
-				<Head />
-				<link href="https://rsms.me/inter/inter.css" rel="stylesheet" />
+				<Head>
+					<link
+						rel="preload"
+						href="/fonts/Inter-roman.var.subset.woff2?v=3.19"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/Inter-italic.var.subset.woff2?v=3.19"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+				</Head>
 				<body
 					className="bg-neutral-50 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200"
 					style={{
