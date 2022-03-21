@@ -34,7 +34,7 @@ yarn-error.log*
 .vercel
 
 # generated sitemap
-public/sitemap.xml
+public/sitemap*.xml
 
 # generated robots.txt
 public/robots.txt
