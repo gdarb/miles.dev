@@ -1,30 +1,28 @@
+"use client";
+
 import { Switch } from "@headlessui/react";
-import { MoonIcon, SunIcon } from "@heroicons/react/outline";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Hover } from "./Hover";
 
-export function ThemeToggle() {
+export function ThemeSwitcher() {
 	const [mounted, setMounted] = useState(false);
 	const { resolvedTheme, setTheme } = useTheme();
 
-	// When mounted on client, now we can show the UI
-	useEffect(() => setMounted(true), []);
+	useEffect(() => {
+		setMounted(true);
+	}, []);
 
-	if (!mounted) {
-		return null;
-	}
+	if (!mounted) return null;
 
 	return (
 		<Switch
 			checked={resolvedTheme === "light"}
 			onChange={(value: boolean) => setTheme(value ? "light" : "dark")}
-			className="h-6 w-6"
+			className="size-6 transition duration-300 hover:text-blue-600 dark:hover:text-blue-400"
 		>
 			<span className="sr-only">Toggle theme</span>
-			<Hover aria-hidden={true}>
-				{resolvedTheme === "light" ? <MoonIcon /> : <SunIcon />}
-			</Hover>
+			{resolvedTheme === "light" ? <MoonIcon /> : <SunIcon />}
 		</Switch>
 	);
 }
