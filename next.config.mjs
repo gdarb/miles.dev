@@ -1,11 +1,5 @@
-// @ts-check
-
-/**
- * @type {import('next').NextConfig}
- **/
-const config = {
-	swcMinify: true,
-	reactStrictMode: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
 	async headers() {
 		return [
 			{
@@ -41,17 +35,8 @@ const config = {
 					},
 				],
 			},
-			{
-				source: "/fonts/(.*)",
-				headers: [
-					{
-						key: "Cache-Control",
-						value: "public, immutable, max-age=31536000",
-					},
-				],
-			},
 		];
 	},
 };
 
-module.exports = config;
+export default nextConfig;
