@@ -5,7 +5,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
+		"lint": "eslint .",
 		"format": "prettier --write .",
 		"prepare": "husky"
 	},
@@ -23,6 +23,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^20.1.0",
 		"@commitlint/config-conventional": "^20.0.0",
+		"@eslint/eslintrc": "^3.3.1",
 		"@types/node": "^24",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
