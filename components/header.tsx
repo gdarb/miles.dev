@@ -14,7 +14,7 @@ export function Header() {
 					>
 						&gt; /home/aidan
 					</Link>
-					<div className="h-5 w-3 animate-pulse rounded-sm bg-red-500" />
+					<div className="h-5 w-3 animate-pulse rounded-xs bg-red-500" />
 				</div>
 				{<ThemeSwitcher />}
 			</Container>
