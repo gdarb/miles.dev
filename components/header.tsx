@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Container } from "./container";
 import { ThemeSwitcher } from "./theme-switcher";
-// import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
 	return (
@@ -16,7 +15,7 @@ export function Header() {
 					</Link>
 					<div className="h-5 w-3 animate-pulse rounded-xs bg-red-500" />
 				</div>
-				{<ThemeSwitcher />}
+				<ThemeSwitcher />
 			</Container>
 		</header>
 	);
